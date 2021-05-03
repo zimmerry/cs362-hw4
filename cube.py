@@ -1,6 +1,6 @@
 def volume(side):
     if side < 0:
-        raise Exception("Negative side length")
+        raise Exception("NegativeSideLength")
     return(side**3)
 
 def isInt(str):
