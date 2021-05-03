@@ -1,9 +1,18 @@
 def volume(side):
+    if side < 0:
+        raise Exception("Negative side length")
     return(side**3)
+
+def isInt(str):
+    try:
+        int(str)
+        return True
+    except ValueError:
+        return False
 
 def getSide():
     side = input("Enter the side length: ")
-    if (not side.isdigit()):
+    if (not isInt(side)):
         return getSide()
     return int(side)
 
